@@ -8,13 +8,8 @@ export const setUser = (profile) => ({
     payload: {profile}
 });
 
-// export const onLogin = (payload) => ({
-//     type: userTypes.LOGIN,
-//     payload
-// });
-
 export const onLogin = (payload) => {
-    console.log('a');
+    console.log(payload);
     return {
         type: userTypes.LOGIN,
         payload

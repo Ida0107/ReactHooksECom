@@ -1,10 +1,10 @@
 import { takeLatest, all, call } from 'redux-saga/effects';
-import { login } from './userApiCalls';
+import { login } from './user.ApiCalls';
 
-function* onClickLogin(payload){
-    console.log(payload);
+function* onClickLogin({payload}){
     try{
-        const res = yield call(login);
+        const res = yield call(login, payload);
+        console.log(res);
     }catch(err){
         console.log(err);
     }
